@@ -6,32 +6,26 @@ import (
 )
 
 func main() {
-	solution([]int{4, 6, 2, 1, 5})
+	// Solution([]int{4, 6, 2, 1, 5}) // 23
+	Solution([]int{6, 3, 1, 4, 2, 5}) // 41, but 46
 }
 
-// h: The H
-func solution(h []int) int {
-	fmt.Println(h)
-
-	// The N
-	n := len(h)
-	if n <= 0 {
-		return 0
-	}
-	if n == 1 {
-		return 1
+func Solution(H []int) int {
+	fmt.Println(H)
+	n := len(H)
+	if n <= 1 {
+		return n
 	}
 
 	// Sorted H index
-	sortedIndex := indexSort(h)
+	sortedIndex := indexSort(H)
 	fmt.Println(sortedIndex)
 
 	// cache invalid result
 	ret := 0
 	for i := 0; i < len(sortedIndex); i++ {
-		h[sortedIndex[i]] = int(math.Pow(2, float64(i)))
-		fmt.Println(h[sortedIndex[i]])
-		ret += h[sortedIndex[i]]
+		H[sortedIndex[i]] = int(math.Pow(2, float64(i)))
+		ret += H[sortedIndex[i]]
 	}
 
 	// calculate valid result
@@ -41,21 +35,12 @@ func solution(h []int) int {
 				if k == j {
 					continue
 				}
-				fmt.Println(sortedIndex, i, j, k, h, sortedIndex[i], sortedIndex[j], sortedIndex[k])
-
-				// if sortedIndex[j] < sortedIndex[i] && sortedIndex[k] < sortedIndex[i] {
-				// 	// left
-				// 	if sortedIndex[k] > sortedIndex[j] {
-				// 		fmt.Println("L")
-				// 		ret -= h[sortedIndex[j]]
-				// 	}
-				// } else if sortedIndex[j] > sortedIndex[i] && sortedIndex[k] > sortedIndex[i] {
-				// 	// right
-				// 	if sortedIndex[k] > sortedIndex[j] {
-				// 		fmt.Println("R")
-				// 		ret -= h[sortedIndex[j]]
-				// 	}
-				// }
+				if k < j {
+					if (sortedIndex[j] < sortedIndex[i] && sortedIndex[k] < sortedIndex[i]) || (sortedIndex[j] > sortedIndex[i] && sortedIndex[k] > sortedIndex[i]) {
+						ret -= H[sortedIndex[k]]
+					}
+				}
+				fmt.Println(ret, sortedIndex, i, j, k, H, sortedIndex[i], sortedIndex[j], sortedIndex[k])
 			}
 		}
 	}
