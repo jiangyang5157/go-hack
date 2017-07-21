@@ -1,3 +1,4 @@
+//Find longest sequence of zeros in binary representation of an integer.
 //https://codility.com/programmers/lessons/1-iterations/binary_gap/
 package main
 
@@ -12,7 +13,6 @@ func main() {
 	fmt.Printf("Integer=%v\nBinaryGap=%v\n", strconv.FormatInt(int64(input), 2), output)
 }
 
-//Find longest sequence of zeros in binary representation of an integer.
 func Solution(N int) int {
 	ret := 0
 	count := -1
