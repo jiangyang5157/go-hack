@@ -16,6 +16,7 @@ func Solution(X int, A []int) int {
 	aMap := make(map[int]int)
 	for i, v := range A {
 		if v > X {
+			// don't care
 			continue
 		}
 		aMap[v]++
