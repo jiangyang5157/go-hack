@@ -8,9 +8,9 @@ import (
 )
 
 func main() {
-	input := 51712
-	output := Solution(input)
-	fmt.Printf("N=%v\nBinaryGap=%v\n", strconv.FormatInt(int64(input), 2), output)
+	N := 51712
+	BinaryGap := Solution(N)
+	fmt.Printf("N=%v\nBinaryGap=%v\n", strconv.FormatInt(int64(N), 2), BinaryGap)
 }
 
 func Solution(N int) int {

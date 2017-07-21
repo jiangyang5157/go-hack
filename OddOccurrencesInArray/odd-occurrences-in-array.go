@@ -5,9 +5,9 @@ package main
 import "fmt"
 
 func main() {
-	input := []int{9, 3, 9, 3, 9, 7, 9}
-	output := Solution(input)
-	fmt.Printf("A=%v\nLeft=%v\n", input, output)
+	A := []int{9, 3, 9, 3, 9, 7, 9}
+	Left := Solution(A)
+	fmt.Printf("A=%v\nLeft=%v\n", A, Left)
 }
 
 func Solution(A []int) int {

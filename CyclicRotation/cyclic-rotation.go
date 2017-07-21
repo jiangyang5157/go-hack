@@ -5,10 +5,10 @@ package main
 import "fmt"
 
 func main() {
-	input1 := []int{3, 8, 9, 7, 6}
-	input2 := 3
-	output := Solution(input1, input2)
-	fmt.Printf("A=%v, K=%v\nA'=%v\n", input1, input2, output)
+	A := []int{3, 8, 9, 7, 6}
+	K := 3
+	A2 := Solution(A, K)
+	fmt.Printf("A=%v, K=%v\nA'=%v\n", A, K, A2)
 }
 
 func Solution(A []int, K int) []int {
