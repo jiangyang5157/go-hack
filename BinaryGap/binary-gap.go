@@ -10,7 +10,7 @@ import (
 func main() {
 	input := 51712
 	output := Solution(input)
-	fmt.Printf("Integer=%v\nBinaryGap=%v\n", strconv.FormatInt(int64(input), 2), output)
+	fmt.Printf("N=%v\nBinaryGap=%v\n", strconv.FormatInt(int64(input), 2), output)
 }
 
 func Solution(N int) int {
