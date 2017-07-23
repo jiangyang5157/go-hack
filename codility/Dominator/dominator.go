@@ -6,10 +6,19 @@ import "fmt"
 
 func main() {
 	A := []int{3, 4, 3, 2, 3, -1, 3, 3}
+	// A := []int{2, 1, 1, 3, 4}
 	Index := Solution(A)
 	fmt.Printf("A=%v\nIndex=%v\n", A, Index)
 }
 
 func Solution(A []int) int {
+	aMap := make(map[int]int)
+	half := len(A) / 2
+	for i := 0; i < len(A); i++ {
+		aMap[A[i]]++
+		if aMap[A[i]] > half {
+			return i
+		}
+	}
 	return -1
 }
