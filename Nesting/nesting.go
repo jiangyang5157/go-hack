@@ -20,13 +20,13 @@ func Solution(S string) int {
 	open := 0
 	for i := 0; i < len(S); i++ {
 		switch S[i] {
-		case ')':
-			if open == 0 {
-				return 0
-			}
-			open--
-		default:
+		case '(':
 			open++
+		case ')':
+			open--
+		}
+		if open < 0 {
+			return 0
 		}
 	}
 

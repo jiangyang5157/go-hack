@@ -44,10 +44,6 @@ func Length(s []int) int {
 	return len(s)
 }
 
-func IsEmpty(s []int) bool {
-	return len(s) == 0
-}
-
 func Peek(s []int) int {
 	return s[len(s)-1]
 }
@@ -56,14 +52,6 @@ func Pop(s []int) (int, []int) {
 	return s[len(s)-1], s[:len(s)-1]
 }
 
-func PopBack(s []int) (int, []int) {
-	return s[0], s[1:]
-}
-
 func Push(s []int, x ...int) []int {
 	return append(s, x...)
-}
-
-func PushBack(s []int, x ...int) []int {
-	return append([]int(x), s...)
 }

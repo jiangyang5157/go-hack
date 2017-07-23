@@ -37,7 +37,7 @@ func Solution(S string) int {
 }
 
 func process(s []byte, b byte) []byte {
-	if !IsEmpty(s) && Peek(s) == b {
+	if Length(s) != 0 && Peek(s) == b {
 		_, s = Pop(s)
 	}
 	return s
@@ -45,10 +45,6 @@ func process(s []byte, b byte) []byte {
 
 func Length(s []byte) int {
 	return len(s)
-}
-
-func IsEmpty(s []byte) bool {
-	return len(s) == 0
 }
 
 func Peek(s []byte) byte {
@@ -59,14 +55,6 @@ func Pop(s []byte) (byte, []byte) {
 	return s[len(s)-1], s[:len(s)-1]
 }
 
-func PopBack(s []byte) (byte, []byte) {
-	return s[0], s[1:]
-}
-
 func Push(s []byte, x ...byte) []byte {
 	return append(s, x...)
-}
-
-func PushBack(s []byte, x ...byte) []byte {
-	return append([]byte(x), s...)
 }
