@@ -12,11 +12,11 @@ func main() {
 }
 
 func Solution(S string) int {
-	s := []byte{}
 	if len(S)%2 != 0 {
 		return 0
 	}
 
+	s := []byte{}
 	for i := 0; i < len(S); i++ {
 		switch S[i] {
 		case ')':
@@ -29,11 +29,11 @@ func Solution(S string) int {
 			s = Push(s, S[i])
 		}
 	}
-	if len(s) > 0 {
-		return 0
-	}
 
-	return 1
+	if len(s) == 0 {
+		return 1
+	}
+	return 0
 }
 
 func process(s []byte, b byte) []byte {
