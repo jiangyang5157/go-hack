@@ -7,8 +7,8 @@ import "sort"
 
 func main() {
 	A := []int{-3, 1, 2, -2, 5, 6}
-	Max := Solution(A)
-	fmt.Printf("A=%v\nMax=%v\n", A, Max)
+	result := Solution(A)
+	fmt.Printf("A=%v\nresult=%v\n", A, result)
 }
 
 func Solution(A []int) int {

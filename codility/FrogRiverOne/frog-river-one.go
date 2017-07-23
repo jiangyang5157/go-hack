@@ -7,8 +7,8 @@ import "fmt"
 func main() {
 	X := 5
 	A := []int{1, 3, 1, 4, 2, 3, 5, 4}
-	EarliestTime := Solution(X, A)
-	fmt.Printf("X=%v, A=%v\nEarliestTime=%v\n", X, A, EarliestTime)
+	result := Solution(X, A)
+	fmt.Printf("X=%v, A=%v\nresult=%v\n", X, A, result)
 }
 
 func Solution(X int, A []int) int {

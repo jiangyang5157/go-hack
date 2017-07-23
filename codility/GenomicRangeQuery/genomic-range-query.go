@@ -8,8 +8,8 @@ func main() {
 	S := "CAGCCTA"
 	P := []int{2, 5, 0}
 	Q := []int{4, 5, 6}
-	Output := Solution(S, P, Q)
-	fmt.Printf("S=%v, P=%v, Q=%v\nOutput=%v\n", S, P, Q, Output)
+	result := Solution(S, P, Q)
+	fmt.Printf("S=%v, P=%v, Q=%v\nresult=%v\n", S, P, Q, result)
 }
 
 func Solution(S string, P []int, Q []int) []int {

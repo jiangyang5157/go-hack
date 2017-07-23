@@ -11,8 +11,8 @@ func main() {
 	// A := []int{3, 1, 2, 4, 3}
 	// A := []int{-1000, 1000}
 	A := []int{-10, -20, -30, -40, 100}
-	Minimal := Solution(A)
-	fmt.Printf("A=%v\nMinimal=%v\n", A, Minimal)
+	result := Solution(A)
+	fmt.Printf("A=%v\nresult=%v\n", A, result)
 }
 
 func Solution(A []int) int {

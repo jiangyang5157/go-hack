@@ -8,8 +8,8 @@ func main() {
 	N := 5
 	A := []int{3, 4, 4, 6, 1, 4, 4}
 	// A := []int{6, 1, 6, 6, 6, 6, 1}
-	Counters := Solution(N, A)
-	fmt.Printf("N=%v, A=%v\nCounters=%v\n", N, A, Counters)
+	result := Solution(N, A)
+	fmt.Printf("N=%v, A=%v\nresult=%v\n", N, A, result)
 }
 
 func Solution(N int, A []int) []int {

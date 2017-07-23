@@ -7,8 +7,8 @@ import "fmt"
 func main() {
 	S := "{[()()]}"
 	// S := "([)()]"
-	IsNested := Solution(S)
-	fmt.Printf("S=%v\nIsNested=%v\n", S, IsNested)
+	result := Solution(S)
+	fmt.Printf("S=%v\nresult=%v\n", S, result)
 }
 
 func Solution(S string) int {

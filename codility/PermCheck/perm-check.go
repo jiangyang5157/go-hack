@@ -7,8 +7,8 @@ import "fmt"
 func main() {
 	A := []int{4, 1, 3, 2}
 	// A := []int{4, 1, 3}
-	IsPermutation := Solution(A)
-	fmt.Printf("A=%v\nisPermutation=%v\n", A, IsPermutation)
+	result := Solution(A)
+	fmt.Printf("A=%v\nresult=%v\n", A, result)
 }
 
 func Solution(A []int) int {

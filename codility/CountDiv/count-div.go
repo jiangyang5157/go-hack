@@ -8,8 +8,8 @@ func main() {
 	A := 6
 	B := 11
 	K := 2
-	Counts := Solution(A, B, K)
-	fmt.Printf("A=%v, B=%v, K=%v\nCounts=%v\n", A, B, K, Counts)
+	result := Solution(A, B, K)
+	fmt.Printf("A=%v, B=%v, K=%v\nresult=%v\n", A, B, K, result)
 }
 
 func Solution(A int, B int, K int) int {

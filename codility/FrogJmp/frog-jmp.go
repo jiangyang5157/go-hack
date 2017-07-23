@@ -8,8 +8,8 @@ func main() {
 	X := 10
 	Y := 85
 	D := 30
-	Jumps := Solution(X, Y, D)
-	fmt.Printf("X=%v, Y=%v, D=%v\nJumps=%v\n", X, Y, D, Jumps)
+	result := Solution(X, Y, D)
+	fmt.Printf("X=%v, Y=%v, D=%v\nresult=%v\n", X, Y, D, result)
 }
 
 func Solution(X int, Y int, D int) int {

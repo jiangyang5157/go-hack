@@ -7,8 +7,8 @@ import "fmt"
 func main() {
 	A := []int{4, 3, 2, 1, 5}
 	B := []int{0, 1, 0, 0, 0}
-	Num := Solution(A, B)
-	fmt.Printf("A=%v, B=%v\nNum=%v\n", A, B, Num)
+	result := Solution(A, B)
+	fmt.Printf("A=%v, B=%v\nresult=%v\n", A, B, result)
 }
 
 func Solution(A []int, B []int) int {

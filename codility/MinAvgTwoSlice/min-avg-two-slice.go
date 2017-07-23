@@ -42,8 +42,8 @@ import (
 
 func main() {
 	A := []int{4, 2, 2, 5, 1, 5, 8}
-	Index := Solution(A)
-	fmt.Printf("A=%v\nIndex=%v\n", A, Index)
+	result := Solution(A)
+	fmt.Printf("A=%v\nresult=%v\n", A, result)
 }
 
 func Solution(A []int) int {

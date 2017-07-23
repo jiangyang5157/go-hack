@@ -6,8 +6,8 @@ import "fmt"
 
 func main() {
 	A := []int{0, 1, 0, 1, 1}
-	Counts := Solution(A)
-	fmt.Printf("A=%v\nCounts=%v\n", A, Counts)
+	result := Solution(A)
+	fmt.Printf("A=%v\nresult=%v\n", A, result)
 }
 
 func Solution(A []int) int {

@@ -9,8 +9,8 @@ import (
 
 func main() {
 	A := []int{10, 2, 5, 1, 8, 20}
-	HasTriangular := Solution(A)
-	fmt.Printf("A=%v\nHasTriangular=%v\n", A, HasTriangular)
+	result := Solution(A)
+	fmt.Printf("A=%v\nresult=%v\n", A, result)
 }
 
 func Solution(A []int) int {
